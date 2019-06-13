@@ -13,4 +13,8 @@ class Paciente extends Model
     function familia(){
         return $this->belongsTo(Familia::class);
     }
+
+    function ficha(){
+        return $this->hasOne(Ficha::class);
+    }
 }

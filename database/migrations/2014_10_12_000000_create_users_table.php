@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
             $table->integer('cargo_id')->unsigned()->nullable();
             $table->integer('unidad_id')->unsigned()->nullable();
             $table->integer('profesion_id')->unsigned()->nullable();
-            $table->integer('familia_id')->unsigned()->nullable();
+
 
 
         });

@@ -35,6 +35,8 @@ class CreatePacientesTable extends Migration
 
             $table->integer('familia_id')->unsigned()->nullable();
             $table->integer('sector_id')->unsigned()->nullable();
+            /*$table->integer('ficha_id')->unsigned()->nullable();*/
+
         });
     }
 

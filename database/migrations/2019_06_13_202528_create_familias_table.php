@@ -15,6 +15,8 @@ class CreateFamiliasTable extends Migration
     {
         Schema::create('familias', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->enum('familia_tipo', ['Unipersonal', 'Nuclear', 'Nuclear Biparental', 'Nuclear Monoparental', 'Reconstituida', 'Extendida'])->nullable();
+            $table->enum('familia_etapa', ['Formacion de Pareja', 'Crianza inicial', 'Con Hijo Preescolar', 'Con Hijo Escolar', 'Con Hijo Adolescente', 'Plataforma de Lanzamiento', 'Nido Vacio', 'Adulto Mayor'])->nullable();
             $table->timestamps();
         });
     }
