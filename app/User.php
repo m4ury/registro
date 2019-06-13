@@ -36,20 +36,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    function cargo(){
-        return $this->belongsTo(Cargo::class);
-    }
-
-    function unidad(){
-        return $this->belongsTo(Unidad::class);
-    }
-
-    function profesion(){
-        return $this->belongsTo(Profesion::class);
-    }
-
-    function sector(){
-        return $this->belongsTo(Sector::class);
-    }
 }
