@@ -30,12 +30,12 @@ class CreatePacientesTable extends Migration
             $table->enum('paciente_estado_civil', ['Soltero(a)', 'Casado(a)', 'Viudo(a)', 'Divorciado(a)'])->nullable();
             $table->enum('paciente_escolaridad', ['Sin Escolaridad', 'Pre-Escolar', 'Basica Incompleta', 'Basica Completa', 'Media Incompleta', 'Media Completa', 'Tec Superior Incompleta', 'Tec Superior Completa', 'Superior Incompleta', 'Superior Completa'])->nullable();
             $table->enum('paciente_prevision_salud',[])->nullable();
-            $table->unsignedDecimal('paciente_ingreso')->nullable();
+            $table->decimal('paciente_ingreso')->nullable();
+            $table->longText('paciente_ubicacion')->nullable();
             $table->timestamps();
 
-            $table->integer('familia_id')->unsigned()->nullable();
-            $table->integer('sector_id')->unsigned()->nullable();
-            /*$table->integer('ficha_id')->unsigned()->nullable();*/
+            $table->unsignedBigInteger('familia_id')->nullable();
+            $table->unsignedBigInteger('sector_id')->nullable();
 
         });
     }

@@ -52,4 +52,8 @@ class User extends Authenticatable
     function sector(){
         return $this->belongsTo(Sector::class);
     }
+    
+    function controles(){
+        return $this->hasMany(Control::class);
+    }
 }

@@ -17,4 +17,8 @@ class Paciente extends Model
     function ficha(){
         return $this->hasOne(Ficha::class);
     }
+
+    function controles(){
+        return $this->hasMany(Control::class);
+    }
 }
