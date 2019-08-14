@@ -22,7 +22,6 @@ class CreatePacientesTable extends Migration
             $table->string('paciente_apellido_m');
             $table->enum('paciente_sexo',['Masculino', 'Femenino', 'Otro'])->nullable();
             $table->date('paciente_fecha_nacimiento');
-            $table->integer('paciente_edad')->nullable();
             $table->string('paciente_direccion')->nullable();
             $table->string('paciente_telefono')->nullable();
             $table->boolean('paciente_jefe_familia')->default(false)->nullable();
@@ -36,6 +35,11 @@ class CreatePacientesTable extends Migration
 
             $table->unsignedBigInteger('familia_id')->nullable();
             $table->unsignedBigInteger('sector_id')->nullable();
+            $table->unsignedBigInteger('sector_id')->nullable();
+            
+
+            $table->foreign('familia_id')->references('id')->on('familias');
+            $table->foreign('sector_id')->references('id')->on('sectors');
 
         });
     }
